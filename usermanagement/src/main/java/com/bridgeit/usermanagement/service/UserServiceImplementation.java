@@ -52,7 +52,7 @@ public class UserServiceImplementation implements IUserService {
 	public List<UserListDto> getAllUser() {
 		List<User> userList = userDao.getAllUser();
 		ModelMapper mapper=new ModelMapper();
-		ArrayList<UserListDto> userListDto=new ArrayList<>();
+		List<UserListDto> userListDto=new ArrayList<>();
 		for (int i = 0; i < userList.size(); i++) 
 		{
 			userListDto.add(mapper.map(userList.get(i),UserListDto.class ));
